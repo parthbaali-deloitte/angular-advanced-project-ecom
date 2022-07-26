@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AnalyticsComponent } from './analytics/analytics.component';
 
 
 @NgModule({
   declarations: [
     SellerPageComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    AnalyticsComponent
   ],
   imports: [
     CommonModule,

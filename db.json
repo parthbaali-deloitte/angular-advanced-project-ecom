@@ -70,6 +70,15 @@
         }
       ],
       "cart": []
+    },
+    {
+      "name": "S 1",
+      "password": "qwerty",
+      "id": "s1@gmail.com",
+      "role": "seller",
+      "wishlist": [],
+      "phone": "1234567890",
+      "cart": []
     }
   ],
   "products": [
@@ -104,6 +113,14 @@
       "owner": "hw2@gmail.com",
       "id": "mfDCMDY",
       "count": 0
+    },
+    {
+      "product_name": "H11",
+      "product_weight": "21kg",
+      "product_price": "2100",
+      "owner": "s1@gmail.com",
+      "count": 0,
+      "id": "R00_R5Q"
     }
   ]
 }

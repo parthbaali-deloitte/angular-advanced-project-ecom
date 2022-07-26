@@ -8,6 +8,8 @@ import { Product } from '../models/product.model';
 })
 export class ProductService {
 
+  u_id = localStorage.getItem("id")
+  
   url = "http://localhost:3000/products/"
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -41,5 +43,8 @@ export class ProductService {
     )
   }
   
+  getProductByOwner() {
+    return this.http.get(this.url)
+  }
 }
 
