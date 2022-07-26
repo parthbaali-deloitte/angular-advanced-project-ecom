@@ -1,0 +1,49 @@
+<button type="button" class="btn btn-default btn-sm" style="margin-left:85% ;" (click)="openPopup()">
+
+    <i class="bi bi-plus-circle" style="font-size:2.5rem ;"></i>
+
+</button>
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h4 class="modal-title">Add Data</h4>
+
+            </div>
+
+            <form [formGroup]="addForm" (ngSubmit)="addProduct()">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                            placeholder="Enter name" formControlName="product_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="product_weight">Product Weight</label>
+                        <input type="text" class="form-control" id="product_weight" aria-describedby="emailHelp"
+                            placeholder="Weight" formControlName="product_weight">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Product Price</label>
+                        <input type="text" class="form-control" id="price" placeholder="Price" formControlName="product_price">
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-center">
+                    <button type="submit" [disabled] ="!addForm.valid" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                <button type="submit" class="btn btn-danger" (click)="closePopup()">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

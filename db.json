@@ -1,0 +1,109 @@
+{
+  "user": [
+    {
+      "id": "hw@gmail.com",
+      "name": "Hello World",
+      "role": "client",
+      "password": "1234",
+      "phone": "8629033899",
+      "wishlist": [
+        {
+          "id": "1",
+          "product_name": "Surf Excel",
+          "product_weight": "1Kg",
+          "product_price": "590"
+        }
+      ],
+      "cart": []
+    },
+    {
+      "id": "hw2@gmail.com",
+      "name": "Hello World2",
+      "role": "seller",
+      "password": "123455",
+      "phone": "1234567890",
+      "wishlist": [
+        {
+          "product_name": "Beardo",
+          "product_weight": "100g",
+          "product_price": "150",
+          "id": "4_KVsKa"
+        },
+        {
+          "product_name": "Beardo",
+          "product_weight": "100g",
+          "product_price": "150",
+          "id": "4_KVsKa"
+        }
+      ],
+      "cart": []
+    },
+    {
+      "name": "Hello World3",
+      "password": "qwerty",
+      "id": "hw3@gmail.com",
+      "role": "client",
+      "phone": "9316144260",
+      "wishlist": [
+        {
+          "id": "1",
+          "product_name": "Surf Excel",
+          "product_weight": "1Kg",
+          "product_price": "590",
+          "owner": "hw2@gmail.com"
+        },
+        {
+          "id": "2",
+          "product_name": "Nivea",
+          "product_weight": "200ml",
+          "product_price": "180",
+          "owner": "hw2@gmail.com",
+          "count": 0
+        },
+        {
+          "product_name": "Beardo",
+          "product_weight": "100g",
+          "product_price": "150",
+          "id": "4_KVsKa",
+          "owner": "hw2@gmail.com",
+          "count": 0
+        }
+      ],
+      "cart": []
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "product_name": "Surf Excel",
+      "product_weight": "1Kg",
+      "product_price": "590",
+      "owner": "hw2@gmail.com",
+      "count": 1
+    },
+    {
+      "id": "2",
+      "product_name": "Nivea",
+      "product_weight": "200ml",
+      "product_price": "180",
+      "owner": "hw2@gmail.com",
+      "count": 1
+    },
+    {
+      "product_name": "Beardo",
+      "product_weight": "100g",
+      "product_price": "150",
+      "id": "4_KVsKa",
+      "owner": "hw2@gmail.com",
+      "count": 1
+    },
+    {
+      "product_name": "P11",
+      "product_weight": "22kg",
+      "product_price": "1200",
+      "owner": "hw2@gmail.com",
+      "id": "mfDCMDY",
+      "count": 0
+    }
+  ]
+}

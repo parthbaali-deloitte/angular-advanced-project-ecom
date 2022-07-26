@@ -1,0 +1,81 @@
+<!-- <div class="header"> Products page </div> -->
+<!-- <mat-paginator *ngIf="!isLoading" [length]="products.length" [pageSize]="9">
+
+</mat-paginator>
+
+
+<mat-form-field class="container" *ngIf="!isLoading">
+    <mat-label>Sort</mat-label>
+    <mat-select [(value)]="selectedValue" (selectionChange)="selectOrder()">
+        <mat-option value="price">Price</mat-option>
+        <mat-option value="name">Name</mat-option>
+    </mat-select>
+</mat-form-field> -->
+<!-- <div class="cards">
+    <div class="products" *ngFor="let product of products">
+        <div class="name">{{product.product_name}}</div>
+        <div class="price">R${{product.product_price}}</div>
+        <mat-divider></mat-divider>
+        <div class="same-row">
+            <div class="seller">
+                <div class="owner">Weight</div>
+                <div class="owner-name">{{product.product_weight}}</div>
+            </div>
+            <div class="description">
+                <div class="owner">ID</div>
+                <div class="owner-name">{{product.p_id}}</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button mat-button (click)="addProductWishlist(product)"> <i class="fas fa-heart"></i> WISHLIST</button>
+            <button mat-button (click)="openBuyDialog(product)"> <i class="fas fa-shopping-cart"></i> BUY</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="header"> {{ user }}
+    <div class="d-flex">
+        <input class="form-control me-2" type="search" [(ngModel)]='product_name' placeholder="Search" aria-label="Search">
+        &nbsp;
+        <button class="btn btn-outline-dark" type="button" (click)="onNameFilter()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        &nbsp;
+        <button class="btn btn-outline-dark" type="button" (click)="onNameFilterClear()">
+            <i class="fa fa-remove" aria-hidden="true"></i>
+        </button>
+    </div>
+    &nbsp;
+</div>
+<section class="section-products">
+    <div class="container">
+        <div class="row justify-content-center text-center" style="margin-left: 250px;">
+            <div class="col-md-8 col-lg-6">
+                <div class="header">
+                    <h3 style="font-size: 15px;">Featured Product</h3>
+                    <h2 style="font-size: 20px;">Popular Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Single Product -->
+            <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products | filter: searchName:'product_name'">
+                <div id="product-1" class="single-product">
+                    <div class="part-1">
+                        <span class="discount" style="font-size: 15px;">15%</span>
+                        <ul>
+                            <li><a href="/client-page"><i class="bi bi-basket2"></i></a></li>
+                            <li><a (click)="addProductWishlist(product)"><i class="bi bi-bag-heart-fill"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="part-2">
+                        <h3 class="product-title" style="font-size: 40px;">{{product.product_name}}</h3>
+                        <h4 class="product-price" style="font-size: 20px;">{{product.product_price}}</h4>
+                        <hr>
+                        <h4 class="product-price" style="font-size: 15px;">{{product.product_weight}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

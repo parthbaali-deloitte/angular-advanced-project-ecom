@@ -1,0 +1,117 @@
+<div class="container">
+
+    <div class="row pad-top-botm ">
+        <div class="col-lg-6 col-md-6 col-sm-6 ">
+            <img src="assets/images/logo.png" style="padding-bottom:20px; width: 150px; height: 150px;">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+
+            <strong>Hashedin Design</strong>
+            <br>
+            <i>Address :</i> Delhi, NCR
+            <br>
+            Gurgaon
+            <br>
+            India
+
+        </div>
+    </div>
+    <div class="row text-center contact-info">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <hr>
+            <span>
+                <strong>Email : </strong> pabali@deloitte.com
+            </span>
+            <span>
+                <strong>Call : </strong> +91-70185-04335
+            </span>
+            <hr>
+        </div>
+    </div>
+    <div class="row pad-top-botm client-info">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <h4> <strong>Customer Information</strong></h4>
+            <strong> {{person.name}}</strong>
+            <br>
+            <b>Address :</b> Solan
+            <br>
+            Himachal Pradesh
+            <br>
+            <b>Call :</b> {{person.phone}}
+            <br>
+            <b>E-mail :</b> {{person.id}}
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+
+            <h4> <strong>Payment Details </strong></h4>
+            <b>Bill Amount : ₹ {{val}} </b>
+            <br>
+            Bill Date : 27th July 2022
+            <br>
+            <b>Payment Status : Paid </b>
+            <br>
+            Delivery Date : 10th August 2022
+            <br>
+            Purchase Date : 27th July 2014
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Weight</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of person.cart">
+                            <td>{{product.product_name}}</td>
+                            <td>{{product.product_weight}}</td>
+                            <td>₹ {{product.product_price}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="ttl-amts">
+                <h5> Total Amount : ₹ {{val}} </h5>
+            </div>
+            <hr>
+            <div class="ttl-amts">
+                <h5> Tax : ₹ {{tax}} ( by 10 % on bill ) </h5>
+            </div>
+            <hr>
+            <div class="ttl-amts">
+                <h4> <strong>Bill Amount :₹ {{val+tax}}</strong> </h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <strong> Important: </strong>
+            <ol>
+                <li>
+                    This is an electronic generated invoice so doesn't require any signature.
+
+                </li>
+                <li>
+                    Please read all terms and polices on www.yourdomaon.com for returns, replacement and other issues.
+
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row pad-top-botm">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <hr>
+            <a href="#" class="btn btn-primary btn-lg">Print Invoice</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="#" class="btn btn-success btn-lg">Download In Pdf</a>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+
+<div class="header"> Wishlist </div>
+
+<div class="cards">
+
+    <div class="products" *ngFor="let product of wishlist">
+
+        <div class="name">{{product.id}}</div>
+
+        <div class="price">Rs{{product.product_name}}</div>
+
+        <mat-divider></mat-divider>
+
+        <div class="same-row">
+
+
+
+            <div class="seller">
+
+                <div class="owner">Price</div>
+                <div class="owner-name">{{product.product_price}}</div>
+
+            </div>
+
+            <div class="description">
+                <div class="owner">Weight</div>
+                <div class="owner-name">{{product.product_weight}}</div>
+
+
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button mat-button (click)="removeProductFromWishlist(product)"> <i class="bi bi-trash3-fill"></i> REMOVE</button>
+            <button mat-button (click)="openBuyDialog(product)"> <i class="bi bi-cart"></i> BUY</button>
+        </div>
+
+    </div>
+
+
+</div>

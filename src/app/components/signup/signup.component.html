@@ -1,0 +1,64 @@
+<div class="main">
+    <img src="">
+
+    <div class="jumbo">
+        <div id="size">
+            <div class="title">
+                <h1>Register</h1>
+                <span style="color: grey;"> Welcome</span>
+                <br>
+            </div>
+            <form [formGroup]="signform" (ngSubmit)="signUser()">
+                <div class="content">
+                    <div class="upper">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName="fname">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput formControlName="lname">
+                        </mat-form-field>
+                    </div>
+                    <div class="mid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" matInput formControlName="phone">
+                        </mat-form-field>
+                    </div>
+                    <div class="lower">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Role</mat-label>
+                            <mat-select [formControl]="roleControl" name="role">
+                                <mat-option *ngFor="let r of role" [value]="r.value">
+                                    {{r.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="last">
+                            <mat-form-field appearance="outline" style="width: 200px;">
+                                <mat-label>Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password"
+                                    formControlName="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+
+                </div>
+                <button [disabled]="signform.invalid" class="cust-but" type="submit">Register</button>
+            </form>
+            <div class="login-line">
+                Already Registered? <a routerLink="/login">Login</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Angular</h2>
+
+        <ul>
+            <li><a routerLink="/client-page/home" routerLinkActive="active"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li><a routerLink="/client-page/profile"><i class="bi bi-person-video3"></i> Profile</a></li>
+            <li><a routerLink="/client-page/wishlist" routerLinkActive="active"><i class="bi bi-balloon-heart-fill"></i> Wishlist</a></li>
+            <li><a routerLink="/client-page/cart"><i class="bi bi-box2-heart-fill"></i> Orders</a></li>
+            <li><a routerLink="/sign-page" (click)="logout()"><i class="bi bi-power"></i> Logout</a></li>
+        </ul>
+
+
+    </div>
+    <div class="main_content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
