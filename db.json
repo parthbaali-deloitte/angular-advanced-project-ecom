@@ -79,6 +79,15 @@
       "wishlist": [],
       "phone": "1234567890",
       "cart": []
+    },
+    {
+      "name": "Parth Bali",
+      "password": "qwerty",
+      "id": "pabali@deloitte.com",
+      "role": "seller",
+      "wishlist": [],
+      "phone": "1234567890",
+      "cart": []
     }
   ],
   "products": [
