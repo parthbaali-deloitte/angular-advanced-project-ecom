@@ -12,7 +12,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { OrderComponent } from './order/order.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FilterPipe } from '../filter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ClientPageRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientPageModule { }
