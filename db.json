@@ -88,6 +88,24 @@
       "wishlist": [],
       "phone": "1234567890",
       "cart": []
+    },
+    {
+      "name": "Test 2",
+      "password": "qwerty",
+      "id": "Test2@gmail.com",
+      "role": "client",
+      "wishlist": [
+        {
+          "id": "2",
+          "product_name": "Nivea",
+          "product_weight": "200ml",
+          "product_price": "180",
+          "owner": "hw2@gmail.com",
+          "count": 1
+        }
+      ],
+      "phone": "1234567890",
+      "cart": []
     }
   ],
   "products": [
@@ -105,7 +123,7 @@
       "product_weight": "200ml",
       "product_price": "180",
       "owner": "hw2@gmail.com",
-      "count": 1
+      "count": 2
     },
     {
       "product_name": "Beardo",

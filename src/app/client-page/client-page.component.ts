@@ -14,5 +14,6 @@ export class ClientPageComponent implements OnInit {
 
   logout() {
     localStorage.removeItem("id")
+    localStorage.removeItem('role')
   }
 }

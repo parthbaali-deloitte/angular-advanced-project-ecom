@@ -12,14 +12,14 @@ export class ApiService {
   constructor(private http: HttpClient, private route: Router) { }
 
   login(form: any) {
-    this.http.get<any>(this.url + form.value.email).subscribe(
+    this.http.get<any>(this.url + form.email).subscribe(
       (data: any) => {
         if (data == null) {
           console.log("Failed")
         }
         else {
           console.log(data)
-          if (form.value.password == data.password) {
+          if (form.password == data.password) {
             if (data.role == "client") {
               localStorage.setItem('id', data.id)
               localStorage.setItem('role', data.role)
@@ -43,9 +43,10 @@ export class ApiService {
     const headers = { 'content-type': 'application/json' }
     const body = JSON.stringify(person);
     console.log(body)
-    this.http.post(this.url, body, { 'headers': headers }).subscribe(
+    return this.http.post(this.url, body, { 'headers': headers }).subscribe(
       (data: any) => {
         this.route.navigate(['/login'])
+        return data
       }, (error: any) => {
         console.log(error)
       }
@@ -64,4 +65,5 @@ export class ApiService {
     let x = localStorage.getItem('role')
     return x
   }
+
 }

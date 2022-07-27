@@ -23,9 +23,10 @@ export class LoginComponent implements OnInit {
 
   loginUser(){ 
     let post = this.loginForm.value;
-    this.api.login(this.loginForm)
+    this.api.login(this.loginForm.value)
   }
 
+  
   
 
 }

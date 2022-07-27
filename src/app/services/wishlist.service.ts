@@ -21,14 +21,14 @@ export class WishlistService {
 
   addWishlist(id: any) {
     const headers = { 'content-type': 'application/json' }
-    this.productService.getProductById(id).subscribe(
+    return this.productService.getProductById(id).subscribe(
       data => {
-        this.service.getUserById(this.u_id).subscribe(
+        return this.service.getUserById(this.u_id).subscribe(
           us => {
             us.wishlist.push(data)
             const body = JSON.stringify(us);
             console.log(us)
-            this.http.put(this.url + this.u_id, body, { 'headers': headers }).subscribe(
+            return this.http.put(this.url + this.u_id, body, { 'headers': headers }).subscribe(
               (x: any) => {
                 console.log("SUCCESS")
               }, (error: any) => {
@@ -41,7 +41,4 @@ export class WishlistService {
     )
   }
 
-  removeWishlist(p_id: any) {
-    return this.http.delete(this.url + p_id)
-  }
 }

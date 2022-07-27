@@ -20,14 +20,14 @@ export class CartService {
 
   addCart(id: any) {
     const headers = { 'content-type': 'application/json' }
-    this.productService.getProductById(id).subscribe(
+    return this.productService.getProductById(id).subscribe(
       data => {
-        this.service.getUserById(this.u_id).subscribe(
+        return this.service.getUserById(this.u_id).subscribe(
           us => {
             us.cart.push(data)
             const body = JSON.stringify(us);
             console.log(us)
-            this.http.put(this.url + this.u_id, body, { 'headers': headers }).subscribe(
+            return this.http.put(this.url + this.u_id, body, { 'headers': headers }).subscribe(
               (x: any) => {
                 console.log("SUCCESS")
               }, (error: any) => {
@@ -40,16 +40,12 @@ export class CartService {
     )
   }
 
-  removeCart(p_id: any) {
-    return this.http.delete(this.url + p_id)
-  }
-
   emptyCart() {
-    this.http.get<Person>(this.url + this.u_id).subscribe(
+    return this.http.get<Person>(this.url + this.u_id).subscribe(
       data => {
         let p = data
         data.cart.splice(0, data.cart.length)
-        this.http.put(this.url + this.u_id, data).subscribe(
+        return this.http.put(this.url + this.u_id, data).subscribe(
           x => {
           }, error => {
             console.log(error)

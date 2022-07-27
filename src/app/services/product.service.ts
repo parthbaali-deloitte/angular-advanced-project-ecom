@@ -36,7 +36,7 @@ export class ProductService {
   }
 
   updateProduct(product: Product) {
-    this.http.put(this.url + product.id, product).subscribe(
+    return this.http.put(this.url + product.id, product).subscribe(
       data => {
         console.log(data)
       }

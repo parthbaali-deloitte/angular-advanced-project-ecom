@@ -13,6 +13,6 @@ export class SearchService {
   }
  
    setSearchString(searchString: string) {
-     this.searchString.next(searchString);
+     return this.searchString.next(searchString);
    }
 }
